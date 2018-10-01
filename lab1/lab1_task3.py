@@ -23,6 +23,7 @@ if __name__ == '__main__':
     try:
         isPD(M)
         B = la.cholesky(hilbert_matrix(4))
+        # https://docs.scipy.org/doc/numpy-1.15.0/reference/generated/numpy.linalg.det.html
         Det = la.linalg.det(M)
         print("Cholesky: \n" , B)
         print("\n DET of Hilbert matrix = " , Det)
