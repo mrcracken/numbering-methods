@@ -1,6 +1,5 @@
-# -*- coding: utf-8 -*-
 """
-@author: mrcarder
+@author: mrcrader
 """
 
 import numpy as np
@@ -10,33 +9,6 @@ def define_matrix(n):
     Function for generetic random matrix with size n x n
     :param n: size of matrix
     :return: random matrix with size n x n
-    """
-    buf = np.zeros((n, n))
-    flat = buf.ravel()
-    flat[0::n+1] = np.random.randint(0, 10)
-    flat[n::n+1] = np.random.randint(0, 10)
-    flat[1::n+1] = np.random.randint(0, 10)
-    return buf
-
-def define_matrix_test_LU(n):
-    """
-    Function for generetic test matrix with size n x n
-    for LU decompose
-    :param n: size of matrix
-    :return: matrix with size n x n
-    """
-    buf = np.zeros((n, n))
-    flat = buf.ravel()
-    flat[0::n+1] = 2
-    flat[n::n+1] = -1
-    flat[1::n+1] = -1
-    return buf
-
-def define_matrix_test(n):
-    """
-    Function for generetic test matrix with size n x n
-    :param n: size of matrix
-    :return: matrix with size n x n
     """
     buf = np.zeros((n, n))
     flat = buf.ravel()
@@ -121,7 +93,24 @@ def solve_LU(lu_matrix, b):
 
     return x
 
-b = define_matrix(6)
-lu_matrix = decompose_to_LU(define_matrix_test_LU(6))
-print(b)
-print(solve_LU(lu_matrix, b))
+def right_part(n):
+    """
+    Function for generetic random matrix with size n x n
+    :param n: size of matrix
+    :return: random matrix with size n x n
+    """
+    buf = np.zeros((n, n))
+    flat = buf.ravel()
+    flat[0::n+1] = np.random.randint(0, 10)
+    flat[n::n+1] = np.random.randint(0, 10)
+    flat[1::n+1] = np.random.randint(0, 10)
+    return buf
+
+if __name__ == '__main__':
+    from numpy import linalg as la
+    n = 6
+    b = right_part(n)
+    lu_matrix = decompose_to_LU(define_matrix(n))
+    Det = la.linalg.det(lu_matrix)
+    print("Solve: \n " , solve_LU(lu_matrix, b))
+    print("\n Det = " , Det)
