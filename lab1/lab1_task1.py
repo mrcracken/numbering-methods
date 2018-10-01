@@ -111,6 +111,7 @@ if __name__ == '__main__':
     n = 6
     b = right_part(n)
     lu_matrix = decompose_to_LU(define_matrix(n))
+    # https://docs.scipy.org/doc/numpy-1.15.0/reference/generated/numpy.linalg.det.html
     Det = la.linalg.det(lu_matrix)
     print("Solve: \n " , solve_LU(lu_matrix, b))
     print("\n Det = " , Det)
