@@ -66,7 +66,7 @@ def get_U(m):
 def test_LU(n):
     """
     Function for testing LU-decomposition.
-    :param n: is an matrix size
+    :param n: is a matrix size
     """
     a = define_matrix(n)
     print('This is matrix a = \n',a)
