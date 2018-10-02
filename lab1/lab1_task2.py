@@ -3,7 +3,8 @@ import numpy as np
 # https://orion1401.gitbooks.io/numerical_analysys_python/content/reshenie_slau_metodom_gaussa_s_postolbtsovim_vibor.html
 
 def bubble_max_row(m, k):
-    """Replace m[col] row with the one of the underlying rows with the modulo greatest first element.
+    """
+    Replace m[col] row with the one of the underlying rows with the modulo greatest first element.
     :param m: numpy matrix
     :param k: number of the step in forward trace
     :return: None. Function changes the matrix structure.
@@ -14,7 +15,8 @@ def bubble_max_row(m, k):
 
 
 def solve_gauss(m):
-    """Solve linear equations system with gaussian method.
+    """
+    Solve linear equations system with gaussian method.
     :param m: numpy matrix
     :return: None
     """
@@ -38,7 +40,7 @@ def solve_gauss(m):
         x[k, 0] = (m[k, -1] - m[k, k:n] * x[k:n, 0]) / m[k, k]
 
     # Display results
-    display_results(x)
+    print(x)
 
 
 def is_singular(m):
@@ -48,6 +50,10 @@ def is_singular(m):
     """
     return np.any(np.diag(m) == 0)
 
-
-m = read_matrix('matrix10x10.txt')
-solve_gauss(m)
+if __name__ == '__main__':
+    # https://stackoverflow.com/questions/21015674/list-object-has-no-attribute-shape
+    m = np.array([[3.0,17.0,10.0],
+         [2.0,4.0,-2.0],
+         [6.0,18.0,-12.0]])
+    
+    solve_gauss(m)
