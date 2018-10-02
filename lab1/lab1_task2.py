@@ -1,6 +1,11 @@
-import numpy as np
+"""
+@author: mrcraken
+@since: 2018
+"""
 
 # https://orion1401.gitbooks.io/numerical_analysys_python/content/reshenie_slau_metodom_gaussa_s_postolbtsovim_vibor.html
+
+import numpy as np
 
 def bubble_max_row(m, k):
     """
