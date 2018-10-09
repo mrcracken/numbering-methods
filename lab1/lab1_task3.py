@@ -3,6 +3,8 @@
 @since: 2018
 """
 
+from math import sqrt
+from pprint import pprint
 from numpy import linalg as la
 
 def hilbert_matrix(n):
@@ -28,20 +30,37 @@ def isPD(B):
     except la.LinAlgError:
         return False
 
-if __name__ == '__main__':
+def cholesky(A):
     """
-    :param n: size of matrix
+    Performs a Cholesky decomposition of A, which must 
+    be a symmetric and positive definite matrix. The function
+    returns the lower variant triangular matrix, L.
     """
-    n = 4
-    M = hilbert_matrix(n)
+    n = len(A)
+
+    # Create zero matrix for L
+    L = [[0.0] * n for i in range(n)]
+
     try:
-        isPD(M)
-        B = la.cholesky(hilbert_matrix(4))
-        
-        # https://docs.scipy.org/doc/numpy-1.15.0/reference/generated/numpy.linalg.det.html
-        Det = la.linalg.det(M)
-        
-        print("Cholesky: \n" , B)
-        print("\n DET of Hilbert matrix = " , Det)
-    except la.LinAlgError:
+        isPD(A)
+    # Perform the Cholesky decomposition
+        for i in range(n):
+            for k in range(i+1):
+                tmp_sum = sum(L[i][j] * L[k][j] for j in range(k))
+                
+                if (i == k): # Diagonal elements
+                    L[i][k] = sqrt(A[i][i] - tmp_sum)
+                else:
+                    L[i][k] = (1.0 / L[k][k] * (A[i][k] - tmp_sum))
+    except Exception as e:
         print("Error")
+    return L
+ 
+A = hilbert_matrix(3)
+L = cholesky(A)
+
+print("Hilbert matrix:")
+pprint(A)
+
+print("Cholesky:")
+pprint(L)
