@@ -4,6 +4,7 @@
 """
 
 from math import sqrt
+# https://docs.python.org/2/library/pprint.html
 from pprint import pprint
 from numpy import linalg as la
 
