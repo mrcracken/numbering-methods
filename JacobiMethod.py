@@ -22,20 +22,26 @@ def jacobi(A,b,N=25,x=None):
         x = (b - dot(R,x)) / D
     return x
 
-A = array([[2.0,1.0,3.0,5.0],[5.0,7.0,9.0,1.0],[2.0,1.0,3.0,5.0],[2.0,1.0,3.0,5.0]])
-b = array([11.0,13.0,6.0,8.0])
-guess = array([1.0,1.0,1.0,1.0])
+def unit_test():
+    """
+    For our unit test I took an example from Wikipedia
+    https://en.wikipedia.org/wiki/Jacobi_method
+    """
+    A = array([[2.0,1.0],[5.0,7.0]])
+    b = array([11.0,13.0])
 
-start_time = time.time()
-sol = jacobi(A,b,N=25,x=guess)
+    start_time = time.time()
+    sol = jacobi(A,b,N=25,x=None)
 
-print ("A:")
-pprint(A)
+    print ("A:")
+    pprint(A)
 
-print ("b:")
-pprint(b)
+    print ("b:")
+    pprint(b)
 
-print ("x:")
-pprint(sol)
+    print ("x:")
+    pprint(sol)
 
-print("--- %s seconds ---" % (time.time() - start_time))
+    print("--- %s seconds ---" % (time.time() - start_time))
+    
+unit_test()
