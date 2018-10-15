@@ -12,10 +12,15 @@ def gauss(A, b, x, n):
         print(x)
     return x
 
-A = np.array([[4.0, -2.0, 1.0], [1.0, -3.0, 2.0], [-1.0, 2.0, 6.0]])
-b = [1.0, 2.0, 3.0]
-x = [1, 1, 1]
-
-n = 5
-
-print (gauss(A, b, x, n))
+def unit_test():
+    """
+    For unit test I took an example from Wikipedia
+    https://en.wikipedia.org/wiki/Gauss–Seidel_method
+    """
+    A = np.array([[16.0, 3.0], [7.0, -11.0]])
+    b = [11.0, 13.0]
+    x = [1, 1]
+    
+    n = 5
+    
+    print (gauss(A, b, x, n))
