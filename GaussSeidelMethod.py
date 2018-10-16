@@ -24,3 +24,5 @@ def unit_test():
     n = 5
     
     print (gauss(A, b, x, n))
+   
+unit_test()
