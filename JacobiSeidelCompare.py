@@ -72,7 +72,7 @@ b = right_part_matrix(5,0.5)
 guess = array([1.0,1.0,1.0,1.0,1.0])
 
 start_time = time.time()
-sol = jacobi(A,b,N=25,x=guess)
+sol_jacob = jacobi(A,b,N=25,x=guess)
 print("\n")
 sol_siel= gauss(A, b, guess, n=25)
 
@@ -80,7 +80,7 @@ print ("A: \n" , A)
 
 print ("b: \n" , b)
 
-print ("x: \n" , sol)
+print ("x_jacob: \n" , sol_jacob)
 
 print ("x_siel: \n" , sol_siel)
 
