@@ -1,6 +1,7 @@
 from numpy import array, zeros, diag, diagflat, dot
 import numpy as np
 import time
+import matplotlib.pyplot as plt
 
 def left_part_matrix(n,a):
     """
@@ -11,9 +12,9 @@ def left_part_matrix(n,a):
     """
     buf = np.zeros((n, n))
     flat = buf.ravel()
-    flat[0::n+1] = a
-    flat[n::n+1] = -1-a
-    flat[1::n+1] = -1+a
+    flat[0::n+1] = 2
+    flat[n::n+1] = -1+a
+    flat[1::n+1] = -1-a
     return buf
 
 def right_part_matrix(n,a):
@@ -46,6 +47,7 @@ def jacobi(A,b,N=25,x=None):
     # Iterate for N times                                                                                                                                                                          
     for i in range(N):
         x = (b - dot(R,x)) / D
+        print(x)
     return x
 
 def gauss(A, b, x, n):
@@ -58,17 +60,28 @@ def gauss(A, b, x, n):
         print(x)
     return x
 
-A = left_part_matrix(5,5)
-b = right_part_matrix(5,5)
+def plot_fix_a(A, b, n, x, nm):
+    a = 0.5
+    for i in range (nm):
+        A = left_part_matrix(i, a)
+        b = right_part_matrix(i, a)
+        jacobi(A, b, n, x=None)
+
+A = left_part_matrix(5,0.5)
+b = right_part_matrix(5,0.5)
 guess = array([1.0,1.0,1.0,1.0,1.0])
 
 start_time = time.time()
 sol = jacobi(A,b,N=25,x=guess)
+print("\n")
+sol_siel= gauss(A, b, guess, n=25)
 
 print ("A: \n" , A)
 
 print ("b: \n" , b)
 
 print ("x: \n" , sol)
+
+print ("x_siel: \n" , sol_siel)
 
 print("--- %s seconds ---" % (time.time() - start_time))
