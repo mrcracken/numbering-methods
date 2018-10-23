@@ -66,6 +66,13 @@ def plot_fix_a(A, b, n, x, nm):
         A = left_part_matrix(i, a)
         b = right_part_matrix(i, a)
         jacobi(A, b, n, x=None)
+        
+def plot_fix_a(nm):
+    a = 0.6
+    for i in range (1,nm+1):
+        A = left_part_matrix(i, a)
+        b = right_part_matrix(i, a)
+        print(jacobi(A,b,N=25,x=None))
 
 A = left_part_matrix(5,0.5)
 b = right_part_matrix(5,0.5)
