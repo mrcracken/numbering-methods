@@ -93,11 +93,20 @@ def plot(m):
         
     
 if __name__ == "__main__":
+    # matrix size for function cg(n, tol, it_max)
     n = 5
+    # max matrix size for function plot(m)
     m = 20
+    # accuracy for function cg()
     tol = 0.000001
-    it_max = 25    
+    # max iteration steps for function cg(n, tol, it_max)
+    it_max = 25
+    # find solution and iteration steps
     sol , it = unit_test(n, tol, it_max)
+    # print solution
     print("x = ", sol)
+    # print number of iteration steps
+    print("\n Steps = ", it)
+    # drawing plot
     plot(m)
     
