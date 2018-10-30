@@ -109,4 +109,3 @@ if __name__ == "__main__":
     print("\n Steps = ", it)
     # drawing plot
     plot(m)
-    
