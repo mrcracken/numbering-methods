@@ -1,3 +1,8 @@
+"""
+@author mrcracken
+@since 2018
+"""
+
 # https://github.com/danbar/qr_decomposition
 # https://rosettacode.org/wiki/QR_decomposition#Python
 
