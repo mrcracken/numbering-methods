@@ -8,10 +8,11 @@
 
 # https://docs.scipy.org/doc/numpy-1.15.1/reference/generated/numpy.linalg.eig.html
 
-from math import hypot
+# https://github.com/irenfro/Eigenvalues
 
 import numpy as np
 
+from math import hypot
 
 def left_part_matrix(n,a):
     """
@@ -62,11 +63,31 @@ def givens_rotation(A):
 
     return (Q, R)
 
+def qrFactorization(arr):
+    temp = arr
+    while(True):
+        Q,R = np.linalg.qr(temp)
+        temp = np.dot(R, Q)
+        break
+    return temp
+
+def printLambda(arr):
+    count = 1
+    for i in range(len(arr)):
+        for j in range(len(arr[i])):
+            if(i == j):
+                temp = arr[i][j]
+                if(abs(temp) < 0.000000000001):
+                    temp = 0
+                print("Lamda"+str(count) +": " + str(temp))
+                count += 1
+
 if __name__ == '__main__':
     """
     :param n: size of matrix
     :param a: number for left_part_matrix function
     """
+    
     n = 5
     a = 0.5
     
@@ -84,3 +105,7 @@ if __name__ == '__main__':
     
     # Print upper triangular matrix R
     print("R:\n", R)
+    
+    matrix = np.array(A)
+    printLambda(qrFactorization(A))
+    
