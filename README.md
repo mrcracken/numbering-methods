@@ -1,4 +1,4 @@
-# numbering-methods
+# Numbering Methods Practice in Python
 
 [Runge-Kutt Method](https://github.com/mrcracken/numbering-methods/blob/master/MethodRunge-Kutta.py)<br>
 [LU](https://github.com/mrcracken/numbering-methods/blob/master/LU.py)<br>
