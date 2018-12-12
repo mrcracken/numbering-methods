@@ -9,6 +9,7 @@
 [Comparison of Jacobi and Seidel Methods](https://github.com/mrcracken/numbering-methods/blob/master/JacobiSeidelCompare.py)<br>
 [Newtons Method](https://github.com/mrcracken/numbering-methods/blob/master/NewtonsMethod.py)<br>
 [Power Method](https://github.com/mrcracken/numbering-methods/blob/master/PowerMethod.py)<br>
+[QR decomposition](https://github.com/mrcracken/numbering-methods/blob/master/QR.py)<br>
 [SOR](https://github.com/mrcracken/numbering-methods/blob/master/SOR.py)<br>
 []()
 
