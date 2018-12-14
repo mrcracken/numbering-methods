@@ -1,8 +1,5 @@
 import numpy as np
 
-# https://trinket.io/python/aea71b62f6
-# https://github.com/IlyaKrotov/Successive-over-relaxation
-
 def column(m, c):
   return [m[i][c] for i in range(len(m))]
 
