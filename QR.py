@@ -3,13 +3,6 @@
 @since 2018
 """
 
-# https://github.com/danbar/qr_decomposition
-# https://rosettacode.org/wiki/QR_decomposition#Python
-
-# https://docs.scipy.org/doc/numpy-1.15.1/reference/generated/numpy.linalg.eig.html
-
-# https://github.com/irenfro/Eigenvalues
-
 import numpy as np
 
 from math import hypot
