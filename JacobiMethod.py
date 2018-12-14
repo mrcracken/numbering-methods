@@ -2,8 +2,6 @@ from pprint import pprint
 from numpy import array, zeros, diag, diagflat, dot
 import time
 
-# https://www.quantstart.com/articles/Jacobi-Method-in-Python-and-NumPy
-
 def jacobi(A,b,N=25,x=None):
     """
     Solves the equation Ax=b via the Jacobi iterative method
