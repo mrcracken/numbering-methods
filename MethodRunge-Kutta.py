@@ -3,8 +3,6 @@
 @since: 2018
 """
 
-# http://people.sc.fsu.edu/~jburkardt/py_src/rk4/rk4.py
-
 import numpy as np
 import platform
   
