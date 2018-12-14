@@ -7,7 +7,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def hilb(n, m=0):
-    # https://gist.github.com/fabianp/1046959
     """
     hilb   Hilbert matrix.
        hilb(n,m) is the n-by-m matrix with elements 1/(i+j-1).
