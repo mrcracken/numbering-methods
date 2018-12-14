@@ -18,7 +18,7 @@
 
 [Power Method](https://github.com/mrcracken/numbering-methods/blob/master/PowerMethod.py) from [eigen](https://slemeshevsky.github.io/num-mmf/eigen/html/._eigen-FlatUI001.html#eigen:tasks:degree_max) task 1.<br>
 
-[QR decomposition](https://github.com/mrcracken/numbering-methods/blob/master/QR.py)<br>
+[QR decomposition](https://github.com/mrcracken/numbering-methods/blob/master/QR.py) from [eigen](https://slemeshevsky.github.io/num-mmf/eigen/html/._eigen-FlatUI001.html#eigen:tasks:degree_max) task 2.<br>
 
 [SOR](https://github.com/mrcracken/numbering-methods/blob/master/SOR.py) from [sles](https://slemeshevsky.github.io/num-mmf/sles/html/._sles-FlatUI003.html#sles:sles-tasks:piv) task 7.<br>
 
