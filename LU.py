@@ -3,8 +3,6 @@
 @since: 2018
 """
 
-# https://orion1401.gitbooks.io/numerical_analysys_python/content/lu_razlozhenie.html
-
 import numpy as np
 
 def define_matrix(n):
