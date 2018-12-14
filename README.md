@@ -2,7 +2,7 @@
 
 [Runge-Kutt Method](https://github.com/mrcracken/numbering-methods/blob/master/MethodRunge-Kutta.py) from [ode](https://slemeshevsky.github.io/num-mmf/ode/html/._ode-FlatUI001.html#ode:tasks:rk) task 3.<br>
 
-[LU](https://github.com/mrcracken/numbering-methods/blob/master/LU.py)<br>
+[LU](https://github.com/mrcracken/numbering-methods/blob/master/LU.py) from [sles](https://slemeshevsky.github.io/num-mmf/sles/html/._sles-FlatUI003.html#sles:sles-tasks:piv) task 1.<br>
 
 [Cholesky decomposition](https://github.com/mrcracken/numbering-methods/blob/master/Cholesky.py) from [sles](https://slemeshevsky.github.io/num-mmf/sles/html/._sles-FlatUI003.html#sles:sles-tasks:piv) task 3.<br>
 
