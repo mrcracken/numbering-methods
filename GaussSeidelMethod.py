@@ -1,7 +1,5 @@
 import numpy as np
 
-# https://austingwalters.com/gauss-seidel-method/
-
 def gauss(A, b, x, n):
     # https://docs.scipy.org/doc/numpy-1.15.0/reference/generated/numpy.tril.html
     L = np.tril(A)
